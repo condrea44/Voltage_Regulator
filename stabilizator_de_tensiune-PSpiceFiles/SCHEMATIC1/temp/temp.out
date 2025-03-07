@@ -1,0 +1,183 @@
+
+**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "temp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN TEMP -20 120 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source STABILIZATOR_DE_TENSIUNE
+Q_Q1         N00172 N06754 N00184 QBC846B 
+Q_Q2         N00180 N10646 N00184 QBC846B 
+Q_Q3         N00172 N00172 N11321 QBC807-25 
+Q_Q4         N00180 N00172 N11325 QBC807-25 
+Q_Q5         N12882 N00337 0 QBC846B 
+V_V1         N00355 0 20V
+Q_Q6         N00355 N00180 N15743 QBC846B 
+Q_Q7         N00355 N15743 N14182 QBC846B 
+R_R2         N06936 N00675  2k TC=0,0 
+R_R3         0 N06943  3k TC=0,0 
+R_RL         0 N00675  2000k TC=0,0 
+Q_Q8         N00337 N00337 0 QBC846B 
+R_R4         N12843 N00355  1k TC=0,0 
+R_R6         N06754 N00355  1k TC=0,0 
+X_R7         N06936 N10646 N06943 POT PARAMS: SET=0 VALUE=3k
+D_D1         0 N06754 BZX84-C2V7 
+R_R8         0 N10646  5k TC=0,0 
+R_R9         N11321 N00355  100 TC=0,0 
+R_R10         N11325 N00355  100 TC=0,0 
+Q_Q9         N00184 N12843 N12882 QBC846B 
+Q_Q10         N12843 N12843 N00337 QBC846B 
+R_R11         N00675 N14182  2 TC=0,0 
+Q_Q11         N00180 N14182 N00675 QBC846B 
+Q_Q12         N00180 N19799 0 QBC846B 
+Q_Q13         N00355 N06754 N19397 QBC846B 
+X_R12         0 N19799 N19397 POT PARAMS: SET=0.72 VALUE=1k
+I_I1         N00675 0 DC 1A  
+D_D2         N00675 0 Dbreak 
+
+**** RESUMING temp.cir ****
+.END
+
+**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84-C2V7      Dbreak          
+          IS  110.880000E-18   10.000000E-15 
+           N     .92657                      
+         ISR    1.515900E-06                 
+         IKF  147.68                         
+          BV    2.7639                       
+         IBV     .06977                      
+          RS     .85899          .1          
+          TT   17.889000E-09                 
+         CJO  344.690000E-12  100.000000E-15 
+          VJ     .72935                      
+           M     .31964                      
+
+
+**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC807-25       QBC846B         
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  108.000000E-15   18.220000E-15 
+          BF  385.7           324.4          
+          NF     .99             .9932       
+         VAF   31.29           82            
+         IKF     .3603           .109        
+         ISE   27.130000E-15  289.400000E-18 
+          NE    1.4             1.4          
+          BR   20.57            8.29         
+          NR     .9849           .9931       
+         VAR   11.62           17.9          
+         IKR     .054            .09         
+         ISC  506.200000E-15    9.982000E-12 
+          NC    1.295           1.763        
+         ISS    0               0            
+          RB    1              10            
+         RBM     .5             5            
+         IRB    1.000000E-06    5.000000E-06 
+          RE     .1415           .649        
+          RC     .2623           .7014       
+         CJE   51.140000E-12   12.440000E-12 
+         VJE     .8911           .7579       
+         MJE     .4417           .3656       
+         CJC   26.560000E-12    3.347000E-12 
+         VJC     .62             .5463       
+         MJC     .4836           .391        
+        XCJC     .459            .6193       
+         CJS    0               0            
+         VJS     .75             .75         
+         MJS     .333            .333        
+          FC     .99             .979        
+          TF  735.900000E-12  490.800000E-12 
+         XTF    1.859           9.51         
+         VTF    3.813           2.927        
+         ITF     .4393           .3131       
+          TR   50.000000E-09   90.000000E-09 
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+
+          JOB CONCLUDED
+
+**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .45
+
