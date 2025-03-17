@@ -1,0 +1,189 @@
+
+**** 03/11/25 22:34:56 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bucla_deschisa"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bucla_deschisa.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 9.8 10.2 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source STABILIZATOR_DE_TENSIUNE
+Q_Q1         N00172 N52482 N00184 QBC846B 
+Q_Q2         N00180 N57094 N00184 QBC846B 
+V_V1         N00355 0 18V
+R_R4         N12843 N00355  1k TC=0,0 
+R_R6         N06754 N00355  500 TC=0,0 
+Q_Q9         N00184 N12843 N46898 QBC846B 
+Q_Q10         N12843 N12843 N46838 QBC846B 
+Q_Q25         N46898 N46838 N53894 QBC846B 
+Q_Q26         N46838 N46838 N54131 QBC846B 
+D_D1         0 N06754 BZX84-C10 
+X_R17         N06754 N52482 N52482 POT PARAMS: SET=1 VALUE=10k
+R_R18         0 N52482  10k TC=0,0 
+R_R19         0 N54131  200 TC=0,0 
+R_R20         0 N53894  30 TC=0,0 
+R_R21         0 N59750  1000k TC=0,0 
+V_V2         N57094 0  AC 1
++SIN 10.04 1m 1k 0 0 0
+Q_Q28         N59646 N12843 N58057 QBC846B 
+Q_Q29         N58057 N46838 N58101 QBC846B 
+R_R22         0 N58101  30 TC=0,0 
+Q_Q33         N59642 N00180 N59646 QBC846B 
+Q_Q34         N59750 N00172 N59646 QBC846B 
+R_R23         N60823 N00355  100 TC=0,0 
+R_R24         N60827 N00355  100 TC=0,0 
+R_R25         N61174 N00355  100 TC=0,0 
+R_R26         N61154 N00355  100 TC=0,0 
+Q_Q35         N11325 N11321 N60827 QBC856B 
+Q_Q36         N00180 N00172 N11325 QBC856B 
+Q_Q37         N60471 N60363 N61154 QBC856B 
+Q_Q38         N59750 N59642 N60471 QBC856B 
+Q_Q39         N11321 N11321 N60823 QBC856B 
+Q_Q40         N00172 N00172 N11321 QBC856B 
+Q_Q41         N60363 N60363 N61174 QBC856B 
+Q_Q42         N59642 N59642 N60363 QBC856B 
+
+**** RESUMING bucla_deschisa.cir ****
+.END
+
+**** 03/11/25 22:34:56 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bucla_deschisa"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84-C10       
+          IS  110.880000E-18 
+           N     .92657      
+         ISR   49.142000E-12 
+         IKF  149.75         
+          BV   10.124        
+         IBV     .72438      
+          RS     .85899      
+          TT  973.820000E-09 
+         CJO   57.292000E-12 
+          VJ     .67995      
+           M     .33236      
+
+
+**** 03/11/25 22:34:56 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bucla_deschisa"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC846B         QBC856B         
+               NPN             PNP             
+       LEVEL    1               1            
+          IS   18.220000E-15   20.140000E-15 
+          BF  324.4           315.3          
+          NF     .9932           .9974       
+         VAF   82              39.15         
+         IKF     .109            .079        
+         ISE  289.400000E-18    6.578000E-15 
+          NE    1.4             1.45         
+          BR    8.29            8.68         
+          NR     .9931           .9952       
+         VAR   17.9             9.5          
+         IKR     .09             .09         
+         ISC    9.982000E-12   16.330000E-15 
+          NC    1.763           1.15         
+         ISS    0               0            
+          RB   10              10            
+         RBM    5               5.000000E-06 
+         IRB    5.000000E-06    5.000000E-06 
+          RE     .649            .663        
+          RC     .7014           .718        
+         CJE   12.440000E-12   11.350000E-12 
+         VJE     .7579           .7071       
+         MJE     .3656           .3808       
+         CJC    3.347000E-12    6.395000E-12 
+         VJC     .5463           .4951       
+         MJC     .391            .44         
+        XCJC     .6193           .6288       
+         CJS    0               0            
+         VJS     .75             .75         
+         MJS     .333            .333        
+          FC     .979            .9059       
+          TF  490.800000E-12  654.600000E-12 
+         XTF    9.51            5.387        
+         VTF    2.927           6.245        
+         ITF     .3131           .2108       
+          TR   90.000000E-09   55.000000E-09 
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+
+          JOB CONCLUDED
+
+**** 03/11/25 22:34:56 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bucla_deschisa"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

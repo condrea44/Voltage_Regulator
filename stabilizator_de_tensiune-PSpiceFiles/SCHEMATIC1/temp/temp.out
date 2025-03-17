@@ -1,5 +1,5 @@
 
-**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+**** 03/16/25 15:04:06 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
 
@@ -49,38 +49,41 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source STABILIZATOR_DE_TENSIUNE
 Q_Q1         N00172 N06754 N00184 QBC846B 
-Q_Q2         N00180 N10646 N00184 QBC846B 
+Q_Q2         N00180 N65068 N00184 QBC846B 
 Q_Q3         N00172 N00172 N11321 QBC807-25 
 Q_Q4         N00180 N00172 N11325 QBC807-25 
-Q_Q5         N12882 N00337 0 QBC846B 
-V_V1         N00355 0 20V
-Q_Q6         N00355 N00180 N15743 QBC846B 
-Q_Q7         N00355 N15743 N14182 QBC846B 
-R_R2         N06936 N00675  2k TC=0,0 
-R_R3         0 N06943  3k TC=0,0 
-R_RL         0 N00675  2000k TC=0,0 
-Q_Q8         N00337 N00337 0 QBC846B 
-R_R4         N12843 N00355  1k TC=0,0 
+V_V1         N00355 0 18V
+Q_Q6         N00355 N62083 N70419 QBC846B 
+Q_Q7         N00355 N70419 N00751 QBC846B 
+R_RL         0 N00769  500 TC=0,0 
+R_R4         N12843 N00355  2k TC=0,0 
 R_R6         N06754 N00355  1k TC=0,0 
-X_R7         N06936 N10646 N06943 POT PARAMS: SET=0 VALUE=3k
-D_D1         0 N06754 BZX84-C2V7 
-R_R8         0 N10646  5k TC=0,0 
 R_R9         N11321 N00355  100 TC=0,0 
 R_R10         N11325 N00355  100 TC=0,0 
-Q_Q9         N00184 N12843 N12882 QBC846B 
-Q_Q10         N12843 N12843 N00337 QBC846B 
-R_R11         N00675 N14182  2 TC=0,0 
-Q_Q11         N00180 N14182 N00675 QBC846B 
-Q_Q12         N00180 N19799 0 QBC846B 
-Q_Q13         N00355 N06754 N19397 QBC846B 
-X_R12         0 N19799 N19397 POT PARAMS: SET=0.72 VALUE=1k
-I_I1         N00675 0 DC 1A  
-D_D2         N00675 0 Dbreak 
+Q_Q9         N00184 N12886 N60921 QBC846B 
+Q_Q10         N12843 N12886 N60878 QBC846B 
+R_R14         0 N65489  2k TC=0,0 
+D_D1         0 N06754 BZX84-C5V1 
+Q_Q11         N00355 N12843 N12886 QBC846B 
+R_R16         0 N60878  100 TC=0,0 
+R_R17         0 N60921  50 TC=0,0 
+Q_Q13         N62083 N12886 N61204 QBC846B 
+R_R18         0 N61204  100 TC=0,0 
+R_R19         N61445 N00355  510 TC=0,0 
+Q_Q14         N62083 N00751 N00769 QBC846B 
+R_R20         N00769 N00751  2 TC=0,0 
+X_R15         N00769 N65068 N65489 POT PARAMS: SET=1 VALUE=2k
+C_C1         0 N00769  100n  TC=0,0 
+Q_Q15         N62083 N00180 N61445 QBC846B 
+Q_Q16         N62083 N70839 0 QBC846B 
+R_R21         0 N70839  510 TC=0,0 
+Q_Q17         N00355 N06754 N79495 QBC846B 
+R_R22         N70839 N79495  3k TC=0,0 
 
 **** RESUMING temp.cir ****
 .END
 
-**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+**** 03/16/25 15:04:06 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
 
@@ -93,21 +96,21 @@ D_D2         N00675 0 Dbreak
 
 
 
-               BZX84-C2V7      Dbreak          
-          IS  110.880000E-18   10.000000E-15 
-           N     .92657                      
-         ISR    1.515900E-06                 
-         IKF  147.68                         
-          BV    2.7639                       
-         IBV     .06977                      
-          RS     .85899          .1          
-          TT   17.889000E-09                 
-         CJO  344.690000E-12  100.000000E-15 
-          VJ     .72935                      
-           M     .31964                      
+               BZX84-C5V1      
+          IS    2.666500E-18 
+           N     .82284      
+         ISR  150.400000E-12 
+         IKF     .01176      
+          BV    5.176        
+         IBV     .10454      
+          RS     .51617      
+          TT   43.858000E-09 
+         CJO  232.290000E-12 
+          VJ     .79587      
+           M     .35004      
 
 
-**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+**** 03/16/25 15:04:06 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
 
@@ -167,7 +170,7 @@ D_D2         N00675 0 Dbreak
 
           JOB CONCLUDED
 
-**** 03/07/25 00:10:48 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+**** 03/16/25 15:04:06 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-temp"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_tensiune-pspicefil
 
@@ -179,5 +182,5 @@ D_D2         N00675 0 Dbreak
 
 
 
-  Total job time (using Solver 1)   =         .45
+  Total job time (using Solver 1)   =         .49
 

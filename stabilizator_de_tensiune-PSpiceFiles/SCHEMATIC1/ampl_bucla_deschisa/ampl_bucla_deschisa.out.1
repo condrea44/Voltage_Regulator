@@ -1,0 +1,72 @@
+
+**** 03/17/25 15:30:45 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ampl_bucla_deschisa"  [ C:\SPB_Data\cdssetup\workspace\projects\stabilizator_de_tensiune\stabilizator_de_ten
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ampl_bucla_deschisa.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/cosmi/downloads/lib_modelepspice_anexa_1/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 10000 1 10M
+----------------$
+ERROR(ORPSIM-16103): Invalid value
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source STABILIZATOR_DE_TENSIUNE
+Q_Q1         N00172 N52482 N00184 QBC846B 
+Q_Q2         N00180 0 N00184 QBC846B 
+Q_Q3         N00172 N00172 N11321 QBC807-25 
+Q_Q4         N00180 N00172 N11325 QBC807-25 
+V_V1         N00355 0 18V
+R_R4         N12843 N00355  2k TC=0,0 
+R_R9         N11321 N00355  100 TC=0,0 
+R_R10         N11325 N00355  100 TC=0,0 
+Q_Q9         N00184 N12886 N60921 QBC846B 
+Q_Q10         N12843 N12886 N60878 QBC846B 
+Q_Q11         N00355 N12843 N12886 QBC846B 
+R_R16         0 N60878  100 TC=0,0 
+R_R17         0 N60921  50 TC=0,0 
+R_R18         0 N00180  500 TC=0,0 
+C_C1         0 N00180  1p  TC=0,0 
+V_V4         N52482 0 DC 0Vdc AC 1m 
+
+**** RESUMING ampl_bucla_deschisa.cir ****
+.END
+
